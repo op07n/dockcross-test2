@@ -19,7 +19,7 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: '/usr/src/mxe/usr/bin/i686-w64-mingw32.shared-gcc/hello-win32.exe'
-          asset_name: 'hello-win32.exe'
+          file: '/usr/src/mxe/usr/bin/i686-w64-mingw32.shared-gcc/hello_win32.exe'
+          asset_name: 'hello_win32.exe'
           tag: ${{ github.ref }}
           overwrite: true
