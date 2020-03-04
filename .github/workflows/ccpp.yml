@@ -1,0 +1,16 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: generate
+      run: |
+            docker run --rm dockcross/windows-shared-x86 > ./xcross; chmod +x ./xcross; mv ./xcross /usr/bin/
+            xcross make
+            ll
