@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: generate
       run: |
-            docker run --rm dockcross/windows-shared-x86 > ./xcross; chmod +x ./xcross; mv ./xcross /usr/bin/
+            docker run --rm dockcross/windows-shared-x86 > ./xcross; chmod +x ./xcross; sudo mv ./xcross /usr/bin/
             xcross make
             ll
